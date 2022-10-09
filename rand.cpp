@@ -14,7 +14,7 @@ int main()
 
   if (numDelUsuario > 0)
   {
-    while (numDelUsuario != numAleatorio)
+    do
     {
       if (numDelUsuario < numAleatorio)
       {
@@ -24,7 +24,7 @@ int main()
       {
         cout << "Tu número ingresado es mayor \n";
       }
-    }
+    } while (numDelUsuario != numAleatorio);
     if (numDelUsuario == numAleatorio)
     {
       cout << "Felicidades, has encontrado el número aleatorio " << numAleatorio << "\n";
