@@ -19,16 +19,22 @@ int main()
       if (numDelUsuario < numAleatorio)
       {
         cout << "Tu número ingresado es menor \n";
+        cin >> numDelUsuario;
       }
       else if (numDelUsuario > numAleatorio)
       {
         cout << "Tu número ingresado es mayor \n";
+        cin >> numDelUsuario;
       }
     } while (numDelUsuario != numAleatorio);
     if (numDelUsuario == numAleatorio)
     {
       cout << "Felicidades, has encontrado el número aleatorio " << numAleatorio << "\n";
     }
+  }
+  else
+  {
+    cout << "El numero debe ser mayor a 0 \n";
   }
 
   return 0;
