@@ -1,1 +1,1 @@
-int
+tiempo * tiempo
