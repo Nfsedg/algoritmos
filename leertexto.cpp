@@ -25,7 +25,7 @@ int main()
       else
         si_lee = true;
       indice = 0;
-      while ((textbuscar[indice] == anyCharacter && letra != spaceCharacter) || (textbuscar[indice] == spaceCharacter && letra != anyCharacter) || textbuscar[indice] == letra && textbuscar[indice] != '\0' && !leer.eof())
+      while ((int(textbuscar[indice]) == 63 && int(letra) != 32) || (int(textbuscar[indice]) == 32 && int(letra) != 63) || textbuscar[indice] == letra && textbuscar[indice] != '\0' && !leer.eof())
       {
         indice++;
         letra = leer.get();
