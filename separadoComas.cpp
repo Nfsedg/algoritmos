@@ -1,72 +1,10 @@
-[9:08 p. m., 13 / 11 / 2022] Emanuel Gálvez : #include<iostream>
-#include <stdlib.h>
-#include <fstream>
-                                              using namespace std;
-
-void escribirFrases();
-
-int main()
-{
-  escribirFrases();
-
-  system("pause");
-  return 0;
-}
-
-void escribirFrases()
-{
-  ofstream archivo;
-  string nombreArchivo, frase;
-  char rpt;
-
-  cout << "Digite el nombre del archivo: ";
-  getline(cin, nombreArchivo);
-
-  archivo.open(nombreArchivo.c_str(), ios::out); // Creamos el archivo
-
-  if (archivo.fail())
-  { // Si a ocurrido algun error
-    cout << "No se pudo abrir el archivo";
-    exit(1);
-  }
-
-  do
-  {
-    fflush(stdin);
-    cout << "Digite una frase: ";
-    getline(cin, frase);
-    archivo << frase << endl;
-
-    cout << "\nDesea agregar otra frase(S/N): ";
-    cin >> rpt;
-  } while ((rpt == 'S') || (rpt == 's'));
-
-  archivo.close(); // Cerramos el archivo
-}
-[9:08 p. m., 13 / 11 / 2022] Emanuel Gálvez : ahí esta broo
-                                              [9:10 p. m., 13 / 11 / 2022] EdgarP : Hay,
-                                                                                    deja lo analizo,
-                                                                                    que está confuso en what's xD
-                                                                                    [9:19 p. m., 13 / 11 / 2022] Emanuel Gálvez : Okey bro
-                                                                                                                                  [9:23 p. m., 13 / 11 / 2022] EdgarP : hmm,
-                                                                                                                                                                        esta distinto,
-                                                                                                                                                                        usa otros tipos de tipos variables y funciones
-                                                                                                                                                                        [9:23 p. m., 13 / 11 / 2022] Emanuel Gálvez : Pero no te preocupes
-                                                                                                                                                                                                                      [9:23 p. m., 13 / 11 / 2022] Emanuel Gálvez : Ya lo hice
-                                                                                                                                                                                                                                                                    [9:23 p. m., 13 / 11 / 2022] Emanuel Gálvez : Ya lo mandé
-                                                                                                                                                                                                                                                                                                                  [9:23 p. m., 13 / 11 / 2022] Emanuel Gálvez : Gracias de todas formas
-                                                                                                                                                                                                                                                                                                                                                                [9:23 p. m., 13 / 11 / 2022] Emanuel Gálvez : Solo le cambié algunas cosas
-                                                                                                                                                                                                                                                                                                                                                                                                              [9:24 p. m., 13 / 11 / 2022] EdgarP : jaja a ta bueno
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    [9:24 p. m., 13 / 11 / 2022] EdgarP : creo que me hiba a tardar más en entender ese código xD
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          [9:24 p. m., 13 / 11 / 2022] EdgarP : yo agarre directamente el del profe y de ahí lo terminé
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [1:01 a. m., 14 / 11 / 2022] Emanuel Gálvez : Sii ya ví bro
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [4:55 p. m., 17 / 11 / 2022] Emanuel Gálvez : /*programa que dado un archivo de datos separado con comas cpon extension txt o csv
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   extraiga las posiciones inicial y final de los datos solicitados segun el lugar
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   de la coma, guardar ñlos datos en un arreglo y ordenarlo*/
+/*programa que dado un archivo de datos separado con comas cpon extension txt o csv
+extraiga las posiciones inicial y final de los datos solicitados segun el lugar
+de la coma, guardar ñlos datos en un arreglo y ordenarlo*/
 #include <iostream>
 #include <fstream>
 #include <conio.h>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            using namespace std;
+using namespace std;
 struct primeroultimo // tipo nuevo de dato que guardara las posiciones de los textos separados por coma
 {
   int inicio, final;
